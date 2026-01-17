@@ -8,6 +8,7 @@ public class Cave {
         this.numCrystals = numCrystals;
         for (int i = 0; i < numCrystals; i++) {
             int seed = (int) (Math.random() * 1000);
+            // value of crystal is dependent on the chance of success
             crystals.add(new Crystal(seed, (int) (Math.pow(seed / 10.0, (Math.random() * 0.5 + 1.25)))));
         }
     }
